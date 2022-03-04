@@ -55,9 +55,9 @@ from .views import StaffUpliftReportView
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Open API Get Podcast",
+      title="Vdooh API Get Podcast",
       default_version='v1',
-      description="Get Podcast",
+      description="Vdooh API Get Podcast",
       contact=openapi.Contact(email="ikorsun@gallerymedia.com"),
    ),
    public=True,
