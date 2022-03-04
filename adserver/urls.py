@@ -55,12 +55,10 @@ from .views import StaffUpliftReportView
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Snippets API",
+      title="Open API Get Podcast",
       default_version='v1',
-      description="Test description",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
-      license=openapi.License(name="BSD License"),
+      description="Get Podcast",
+      contact=openapi.Contact(email="ikorsun@gallerymedia.com"),
    ),
    public=True,
    permission_classes=[permissions.AllowAny],
