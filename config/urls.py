@@ -5,6 +5,9 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 from django.views import defaults as default_views
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
 
 
 urlpatterns = []
@@ -45,6 +48,19 @@ if settings.ADSERVER_ADMIN_URL:
     # In production, a custom URL path can be specified
     # If no ADSERVER_ADMIN_URL is specified, the Django admin is disabled
     urlpatterns += [path(f"{settings.ADSERVER_ADMIN_URL}/", admin.site.urls)]
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Snippets API",
+      default_version='v1',
+      description="Test description",
+      terms_of_service="https://www.google.com/policies/terms/",
+      contact=openapi.Contact(email="contact@snippets.local"),
+      license=openapi.License(name="BSD License"),
+   ),
+   public=True,
+   permission_classes=[permissions.AllowAny],
+)
 
 urlpatterns += [
     path(r"accounts/", include("allauth.urls")),

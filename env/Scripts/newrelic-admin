@@ -1,0 +1,5 @@
+#!C:\Users\ikorsun\Projects\ethical-ad-server\env\Scripts\python.exe
+
+import newrelic.admin
+
+newrelic.admin.main()

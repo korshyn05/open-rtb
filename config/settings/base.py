@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     "simple_history",
     "django_slack",
     "djstripe",
+    "drf_yasg"
 ]
 
 MIDDLEWARE = [
